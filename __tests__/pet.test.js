@@ -26,9 +26,9 @@ describe('growUp', () => {
         pet.growUp();
         expect(pet.age).toEqual(1);
     
+    });
     it('increment the hunger by 5', () => {
         expect(pet.hunger).toEqual(5);
-    });
     });
 });
 

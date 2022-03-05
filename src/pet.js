@@ -9,5 +9,4 @@ Pet.prototype.growUp = function () {
 }
 
 
-
 module.exports = Pet; 
