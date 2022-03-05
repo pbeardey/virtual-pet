@@ -4,32 +4,29 @@ describe('constructor',() => {
     it ('returns an object', () => {
         expect(new Pet('Fido')).toBeInstanceOf(Object);
     });
+    const pet = new Pet('Fido');
     it('sets the name property', () => {
-        const pet = new Pet('Fido');
         expect(pet.name).toEqual('Fido');
     })
     it('checks the age property', () => {
-        const pet = new Pet('Fido');
         expect(pet.age).toEqual(0);
     });
     it('checks the hunger property', () => {
-        const pet = new Pet('Fido');
         expect(pet.hunger).toEqual(0);
     });
     it('checks the fitness property', () => {
-        const pet = new Pet('Fido');
         expect(pet.fitness).toEqual(10);
     });
     
 });
 
-const pet = new Pet('Fido');
 
 describe('growUp', () => {
-    
+    const pet = new Pet('Rover');
+
+    pet.growUp();
+
     it('increment the age by 1', () => {
-        expect(pet.age).toEqual(0);
-        pet.growUp();
         expect(pet.age).toEqual(1);
     });
     it('increment the hunger by 5', () => {
@@ -41,8 +38,14 @@ describe('growUp', () => {
 });
 
 describe('walk', () => {
+    const pet = new Pet('Rover');
+
     it('increment the fitness by 4 upto max 10', () => {
-        expect(pet.fitness).toEqual(7);
+        pet.growUp();
+        pet.growUp();
+        expect(pet.fitness).toEqual(4);
+        pet.walk();
+        expect(pet.fitness).toEqual(8);
         pet.walk();
         expect(pet.fitness).toEqual(10);
     });
