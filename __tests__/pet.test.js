@@ -15,13 +15,18 @@ describe('constructor',() => {
         expect(pet.age).toEqual(0);
     })
     
-    const pet = new Pet('Fido');
+    
+});
 
-    it('use the growUp method to increase the age by 1', () => {
+describe('growUp', () => {
+
+    const pet = new Pet('Fido');
+    
+    it('increment the age by 1', () => {
         expect(pet.age).toEqual(0);
         pet.growUp();
         expect(pet.age).toEqual(1);
-
+    
     })
-
-});
+ß
+})
