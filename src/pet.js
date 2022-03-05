@@ -12,5 +12,15 @@ Pet.prototype.growUp = function () {
     this.fitness -=3;
 }
 
+Pet.prototype.walk = function () {
+    //This method increases the fitness by 4 upto a max value of 10;
+    const MAX_FITNESS = 10;
+    if (this.fitness + 4 <= MAX_FITNESS) {
+        this.fitness +=4;
+    } else {
+        this.fitness = MAX_FITNESS;
+    }
+}
+
 
 module.exports = Pet; 
