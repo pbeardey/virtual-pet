@@ -141,69 +141,10 @@ describe('checkUp', () => {
         const pet = new Pet('Rover');
         expect(pet.checkUp()).toBe('I feel great!');
 
-    })
+    });
+    it('if not alive, return "Your pet is no longer alive :(', () => {
+        const pet = new Pet('Rover');
+        pet.age = 30;
+        expect(pet.checkUp()).toBe('Your pet is no longer alive :(');
+    });
 });
-
-
-
-// describe('isAlive', () => {
-//     //checkUp
-//     it('isAlive is false because hunger is 10 or more, checkUp() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.hunger = 10;
-//         expect(pet.checkUp()).toBe('Your pet is no longer alive :(');
-//     });
-//     it('isAlive is false because fitness is 0 or less, checkUp() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.fitness = 0;
-//         expect(pet.checkUp()).toBe('Your pet is no longer alive :(');
-//     });
-//     it('isAlive is false because age is 30 or more, checkUp() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.age = 30;
-//         expect(pet.checkUp()).toBe('Your pet is no longer alive :(');
-//     });
-
-//     //walk
-//     it('isAlive is false because hunger is 10 or more, walk() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.hunger = 10;
-//         expect(pet.walk()).toBe('Your pet is no longer alive :(');
-//     });
-//     it('isAlive is false because fitness is 0 or less, walk() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.fitness = 0;
-//         expect(pet.walk()).toBe('Your pet is no longer alive :(');
-//     });
-//     it('isAlive is false because age is 30 or more, walk() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.age = 30;
-//         expect(pet.walk()).toBe('Your pet is no longer alive :(');
-//     });
-
-//     //growUp
-//     it('isAlive is false because hunger is 10 or more, growUp() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.hunger = 10;
-//         expect(pet.growUp()).toBe('Your pet is no longer alive :(');
-//         pet.hunger = 5;
-//         expect(pet.growUp()).toBe('Your pet is no longer alive :(');
-//     });
-//     it('isAlive is false because fitness is 0 or less, growUp() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.fitness = 0;
-//         expect(pet.growUp()).toBe('Your pet is no longer alive :(');
-//         pet.fitness = 3;
-//         pet.hunger = 0;
-//         expect(pet.growUp()).toBe('Your pet is no longer alive :(');
-//     });
-//     it('isAlive is false because age is 30 or more, growUp() should return "Your pet is no longer alive :("', () => {
-//         const pet = new Pet('Bruno');
-//         pet.age = 30;
-//         expect(pet.growUp()).toBe('Your pet is no longer alive :(');
-//         pet.age = 29;
-//         pet.hunger = 0;
-//         expect(pet.growUp()).toBe('Your pet is no longer alive :(');
-//     });
-
-// });
