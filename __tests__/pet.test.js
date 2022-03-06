@@ -126,3 +126,21 @@ describe('checkUp', () => {
 
     })
 });
+
+
+// describe('isAlive', () => {
+//     it('fitness is 0 or less, it shoud return false', () => {
+//         const pet = new Pet('Rover');
+//         pet.fitness = 0;
+//         expect(pet.isAlive()).toBe(false);
+//     });
+//     it('hunger is 10 or more, it should return false', () => {
+
+//     });
+//     it('age is 30 or more, it shoud retrun flase',() => {
+
+//     });
+//     it('otherwise return true', () => {
+
+//     })
+// });
