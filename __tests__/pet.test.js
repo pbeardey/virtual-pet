@@ -148,3 +148,38 @@ describe('checkUp', () => {
         expect(pet.checkUp()).toBe('Your pet is no longer alive :(');
     });
 });
+
+describe('testBaby',() => {
+    //check children property length is empty, adopt baby,  then length 1 , 
+    it('check children grows in length when a baby is adopted', () => {
+        const parent = new Pet('Rover');
+        const babyAdopt = new Pet('child1');
+        let prev = parent.children.length;
+        parent.adoptChild(babyAdopt);
+        expect(parent.children.length-prev).toBe(1);
+    });
+
+    //expect(pet.children[0]).toBeInstanceOf(Pet)
+    it('check adopted child is of type object', () => {
+        const parent = new Pet('Rover');
+        const babyAdopt = new Pet('child1');
+        parent.adoptChild(babyAdopt);
+        expect(parent.children[0]).toBeInstanceOf(Pet);
+    });
+
+    //check children property length is empty, have baby,  then length 1 , 
+    it('check children grows in length when a baby is adopted', () => {
+        const parent = new Pet('Rover');
+        let prev = parent.children.length;
+        parent.haveBaby('child1');
+        expect(parent.children.length-prev).toBe(1);
+    });
+
+    //expect(pet.children[0]).toBeInstanceOf(Pet)
+    it('check new have baby is of type object', () => {
+        const parent = new Pet('Rover');
+        parent.haveBaby('child1');
+        expect(parent.children[0]).toBeInstanceOf(Pet);
+    });
+
+})
